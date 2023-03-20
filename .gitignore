@@ -1,0 +1,24 @@
+.DS_Store
+.envrc
+
+# Git Keeps
+!*/.gitkeep
+
+# Files
+*.log
+*.wal
+node_modules/
+package-lock.json
+yarn.lock
+
+backups/*
+!backups/.gitkeep
+
+certs/*
+!certs/.gitkeep
+
+data/*
+!data/.gitkeep
+
+logs/*
+!logs/.gitkeep

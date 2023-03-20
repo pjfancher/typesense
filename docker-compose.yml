@@ -1,0 +1,18 @@
+version: "3.4"
+services:
+    typesense:
+        image: typesense/typesense:0.24.0
+        container_name: typesense
+        volumes:
+            - ./logs/:/logs/
+            - ./data:/data
+            - ./backups:/backups
+        environment:
+            - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+            - TYPESENSE_API_PORT=${TYPESENSE_API_PORT}
+            - TYPESENSE_DATA_DIR=${TYPESENSE_DATA_DIR}
+            - TYPESENSE_LOG_DIR=${TYPESENSE_LOG_DIR}
+            - TYPESENSE_ENABLE_CORS=${TYPESENSE_ENABLE_CORS}
+        ports:
+            - "8108:8108"
+        restart: unless-stopped

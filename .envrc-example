@@ -1,0 +1,10 @@
+# You need to generate a real API Key and replace the value below
+# https://typesense.org/docs/0.24.0/api/api-keys.html#create-an-api-key
+
+# TypeSense
+export TYPESENSE_API_KEY=123  # <-- Replace this with your API Key
+export TYPESENSE_API_PORT=8108
+export TYPESENSE_DATA_DIR=/data
+export TYPESENSE_LOG_DIR=/logs
+export TYPESENSE_ENABLE_CORS=true
+export TYPESENSE_BACKUP_PATH=/backups/
