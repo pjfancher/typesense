@@ -9,9 +9,9 @@ NC='\033[0m'
 
 # Connect
 ###################
-alias ts="ssh root@5.161.116.118"
-# Logs
+alias ts="ssh typesense@5.161.116.118"
 
+# Logs
 ###################
 alias logs="cd $HOME_DIR/logs/"
 alias tslog='tail -f -n 75 $HOME_DIR/logs/typesense/typesense.log'
