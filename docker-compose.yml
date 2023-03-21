@@ -14,5 +14,5 @@ services:
             - TYPESENSE_LOG_DIR=${TYPESENSE_LOG_DIR}
             - TYPESENSE_ENABLE_CORS=${TYPESENSE_ENABLE_CORS}
         ports:
-            - "8108:8108"
+            - "80:80"
         restart: unless-stopped
