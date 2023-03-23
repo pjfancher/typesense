@@ -16,6 +16,7 @@ backups/*
 
 certs/*
 !certs/.gitkeep
+services/nginx/certs/*
 
 data/*
 !data/.gitkeep

@@ -1,5 +1,18 @@
 version: "3.4"
 services:
+    nginx:
+        image: nginx:1.23.3
+        container_name: nginx
+        volumes:
+            - ./services/nginx/dev.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./services/nginx/challenge/:/var/www/certbot/:ro
+            - ./services/nginx/certs/:/etc/nginx/ssl/:ro
+            - ./logs/nginx:/var/log/nginx
+        ports:
+            - "80:80"
+            - "443:443"
+        restart: unless-stopped
+
     typesense:
         image: typesense/typesense:0.24.0
         container_name: typesense
@@ -14,5 +27,5 @@ services:
             - TYPESENSE_LOG_DIR=${TYPESENSE_LOG_DIR}
             - TYPESENSE_ENABLE_CORS=${TYPESENSE_ENABLE_CORS}
         ports:
-            - "80:80"
+            - "8443:8443"
         restart: unless-stopped
