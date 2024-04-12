@@ -1,5 +1,5 @@
 # Use the official Typesense image
-FROM typesense/typesense:0.24.0
+FROM typesense/typesense:26.0
 
 # Create the necessary directories
 RUN mkdir -p /logs /data /backups
